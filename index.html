@@ -1,0 +1,452 @@
+<!-- ==============================================
+     Fayl: index.html
+     Təsvir: Nexus AI - Tək Səhifəli Tətbiq (SPA)
+             Bütün səhifələr bu faylda bölmə kimi yerləşir.
+     ============================================== -->
+<!DOCTYPE html>
+<html lang="az" data-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Nexus AI - Akademik, Professional və Lokal Biznes üçün Süni İntellekt həlləri">
+    <title>Nexus AI | Süni İntellekt Platforması</title>
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/animations.css">
+    <link rel="stylesheet" href="css/components.css">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+    <!-- ============ ƏSAS KONTEYNER ============ -->
+    <div id="app" class="app-container">
+        
+        <!-- ============ SIDEBAR ============ -->
+        <button id="mobile-menu-toggle" class="btn-icon mobile-only" aria-label="Menyunu aç">
+            <i class="fas fa-bars"></i>
+        </button>
+        
+        <nav id="sidebar" class="sidebar glass">
+            <div class="sidebar-header">
+                <h1 class="logo">
+                    <span class="logo-icon"><i class="fas fa-cube"></i></span>
+                    Nexus<span class="text-electric">AI</span>
+                </h1>
+                <button id="theme-toggle" class="btn-icon" aria-label="Tema dəyiş" title="Tema dəyiş">
+                    <i class="fas fa-moon"></i>
+                </button>
+            </div>
+            
+            <ul class="nav-menu">
+                <li class="nav-item">
+                    <a href="#home" class="nav-link active" data-page="home">
+                        <i class="fas fa-home"></i> <span>Ana Səhifə</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="#academic" class="nav-link" data-page="academic">
+                        <i class="fas fa-graduation-cap"></i> <span>Akademik</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="#professional" class="nav-link" data-page="professional">
+                        <i class="fas fa-briefcase"></i> <span>Professional</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="#business" class="nav-link" data-page="business">
+                        <i class="fas fa-store"></i> <span>Biznes</span>
+                    </a>
+                </li>
+            </ul>
+            
+            <div class="sidebar-footer">
+                <p>&copy; 2025 Nexus AI</p>
+                <p class="version">v1.0.0</p>
+            </div>
+        </nav>
+
+        <!-- ============ ƏSAS MƏZMUN ============ -->
+        <main id="main-content" class="main-content">
+            
+            <!-- ========== ANA SƏHİFƏ ========== -->
+            <section id="page-home" class="page-section active">
+                <!-- Hero -->
+                <div class="hero-section fade-in">
+                    <div class="hero-content">
+                        <h2 class="hero-title">
+                            Süni İntellektlə <br> 
+                            <span class="text-electric">Gələcəyə</span> Addım Atın
+                        </h2>
+                        <p class="hero-description">
+                            Akademik yazılar, peşəkar CV təkmilləşdirmə və biznesinizin 
+                            rəqəmsal idarəsi üçün nəzərdə tutulmuş vahid platforma.
+                        </p>
+                        <button class="btn btn-primary" data-page="academic">
+                            <i class="fas fa-rocket"></i> Başlayın
+                        </button>
+                    </div>
+                    <div class="hero-visual">
+                        <div class="orb orb-1"></div>
+                        <div class="orb orb-2"></div>
+                        <div class="orb orb-3"></div>
+                        <div class="hero-icon">
+                            <i class="fas fa-robot"></i>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Xidmətlər Grid -->
+                <section class="services-section slide-up">
+                    <h3 class="section-title">Xidmətlərimiz</h3>
+                    <div class="services-grid">
+                        <!-- Akademik -->
+                        <div class="card glass" data-page="academic" style="cursor: pointer;">
+                            <div class="card-icon"><i class="fas fa-file-alt"></i></div>
+                            <h4 class="card-title">Akademik Köməkçi</h4>
+                            <p class="card-text">
+                                Mühazirə konspekti, esse və tədqiqatlarınızı saniyələr ərzində strukturlaşdırın.
+                            </p>
+                            <span class="card-link">
+                                İstifadə et <i class="fas fa-arrow-right"></i>
+                            </span>
+                        </div>
+
+                        <!-- Professional -->
+                        <div class="card glass" data-page="professional" style="cursor: pointer;">
+                            <div class="card-icon"><i class="fas fa-id-card"></i></div>
+                            <h4 class="card-title">Professional CV & LinkedIn</h4>
+                            <p class="card-text">
+                                İdeal CV-ni yaradın və LinkedIn profilinizi AI ilə analiz edərək optimallaşdırın.
+                            </p>
+                            <span class="card-link">
+                                İstifadə et <i class="fas fa-arrow-right"></i>
+                            </span>
+                        </div>
+
+                        <!-- Biznes -->
+                        <div class="card glass" data-page="business" style="cursor: pointer;">
+                            <div class="card-icon"><i class="fas fa-comments"></i></div>
+                            <h4 class="card-title">Lokal Biznes Panel</h4>
+                            <p class="card-text">
+                                Müştəri rəylərinə avtomatik cavablar yazın və sosial media kontentinizi planlayın.
+                            </p>
+                            <span class="card-link">
+                                İstifadə et <i class="fas fa-arrow-right"></i>
+                            </span>
+                        </div>
+                    </div>
+                </section>
+            </section>
+
+            <!-- ========== AKADEMİK SƏHİFƏ ========== -->
+            <section id="page-academic" class="page-section">
+                <div class="page-transition">
+                    <header class="page-header">
+                        <h2><i class="fas fa-graduation-cap"></i> Akademik Köməkçi</h2>
+                        <p>Mətni daxil edin, AI sizin üçün strukturlaşdırsın.</p>
+                    </header>
+
+                    <div class="tool-layout">
+                        <!-- Giriş -->
+                        <div class="input-panel glass">
+                            <div class="form-group">
+                                <label for="academic-type">Tapşırıq Tipi</label>
+                                <select id="academic-type" class="form-select">
+                                    <option value="summarize">Mühazirəni Konspekt Et</option>
+                                    <option value="essay">Esse Yaz</option>
+                                    <option value="research">Tədqiqat Planı Qur</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="academic-input">Mətninizi Daxil Edin</label>
+                                <textarea id="academic-input" class="form-textarea" rows="10" 
+                                    placeholder="Mühazirə mətni, qeydlər və ya mövzunu bura yazın..."></textarea>
+                            </div>
+                            <button id="btn-process-academic" class="btn btn-primary btn-block">
+                                <i class="fas fa-magic"></i> Emal Et
+                            </button>
+                        </div>
+
+                        <!-- Nəticə -->
+                        <div class="output-panel glass" id="academic-output-panel">
+                            <div class="output-header">
+                                <h4><i class="fas fa-file-alt"></i> Nəticə</h4>
+                                <div id="academic-typing-indicator" class="typing-indicator hidden">
+                                    <span></span><span></span><span></span>
+                                </div>
+                            </div>
+                            <div id="academic-output" class="output-content">
+                                <p class="placeholder-text">Hazırlanmış mətn burada görünəcək...</p>
+                            </div>
+                            <div class="output-actions">
+                                <button class="btn btn-secondary btn-sm" id="btn-copy-academic" disabled>
+                                    <i class="fas fa-copy"></i> Kopyala
+                                </button>
+                                <button class="btn btn-secondary btn-sm" id="btn-download-academic" disabled>
+                                    <i class="fas fa-download"></i> Yüklə
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- ========== PROFESSIONAL SƏHİFƏ ========== -->
+            <section id="page-professional" class="page-section">
+                <div class="page-transition">
+                    <header class="page-header">
+                        <h2><i class="fas fa-briefcase"></i> Professional Alətlər</h2>
+                        <p>CV Generator və LinkedIn Analizator</p>
+                    </header>
+
+                    <!-- Tablar -->
+                    <div class="tabs glass">
+                        <button class="tab active" data-tab="cv-generator">
+                            <i class="fas fa-file-pdf"></i> CV Generator
+                        </button>
+                        <button class="tab" data-tab="linkedin-analyzer">
+                            <i class="fab fa-linkedin"></i> LinkedIn Analiz
+                        </button>
+                    </div>
+
+                    <!-- ====== CV GENERATOR ====== -->
+                    <div id="tab-cv-generator" class="tab-content active">
+                        <!-- Stepper -->
+                        <div class="stepper glass">
+                            <div class="step active" data-step="1">
+                                <div class="step-number">1</div>
+                                <div class="step-label">Şəxsi Məlumatlar</div>
+                            </div>
+                            <div class="step" data-step="2">
+                                <div class="step-number">2</div>
+                                <div class="step-label">Təcrübə & Təhsil</div>
+                            </div>
+                            <div class="step" data-step="3">
+                                <div class="step-number">3</div>
+                                <div class="step-label">Bacarıqlar & Dil</div>
+                            </div>
+                            <div class="step" data-step="4">
+                                <div class="step-number">4</div>
+                                <div class="step-label">Önizləmə & Yüklə</div>
+                            </div>
+                        </div>
+
+                        <!-- Addım Formları -->
+                        <div class="stepper-forms">
+                            <!-- Addım 1: Şəxsi -->
+                            <div class="step-form active" data-step-form="1">
+                                <div class="form-row">
+                                    <div class="form-group">
+                                        <label for="cv-first-name">Ad</label>
+                                        <input type="text" id="cv-first-name" class="form-input" placeholder="Əli">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="cv-last-name">Soyad</label>
+                                        <input type="text" id="cv-last-name" class="form-input" placeholder="Məmmədov">
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="cv-email">Email</label>
+                                    <input type="email" id="cv-email" class="form-input" placeholder="ali@example.com">
+                                </div>
+                                <div class="form-group">
+                                    <label for="cv-phone">Telefon</label>
+                                    <input type="tel" id="cv-phone" class="form-input" placeholder="+994 50 123 45 67">
+                                </div>
+                                <button class="btn btn-primary next-step" data-next="2">
+                                    Növbəti <i class="fas fa-arrow-right"></i>
+                                </button>
+                            </div>
+
+                            <!-- Addım 2: Təcrübə & Təhsil -->
+                            <div class="step-form" data-step-form="2">
+                                <div class="form-group">
+                                    <label for="cv-experience">İş Təcrübəsi</label>
+                                    <textarea id="cv-experience" class="form-textarea" rows="4" 
+                                        placeholder="Şirkət, Vəzifə, Tarix aralığı..."></textarea>
+                                </div>
+                                <div class="form-group">
+                                    <label for="cv-education">Təhsil</label>
+                                    <textarea id="cv-education" class="form-textarea" rows="3" 
+                                        placeholder="Universitet, İxtisas, İl..."></textarea>
+                                </div>
+                                <div class="btn-group">
+                                    <button class="btn btn-secondary prev-step" data-prev="1">
+                                        <i class="fas fa-arrow-left"></i> Əvvəlki
+                                    </button>
+                                    <button class="btn btn-primary next-step" data-next="3">
+                                        Növbəti <i class="fas fa-arrow-right"></i>
+                                    </button>
+                                </div>
+                            </div>
+
+                            <!-- Addım 3: Bacarıqlar -->
+                            <div class="step-form" data-step-form="3">
+                                <div class="form-group">
+                                    <label for="cv-skills">Bacarıqlar (vergüllə ayırın)</label>
+                                    <input type="text" id="cv-skills" class="form-input" 
+                                        placeholder="Python, Data Analitika, Komanda İdarəetmə">
+                                </div>
+                                <div class="form-group">
+                                    <label for="cv-languages">Dillər</label>
+                                    <input type="text" id="cv-languages" class="form-input" 
+                                        placeholder="Azərbaycan (ana dili), İngilis (sərbəst), Rus (yaxşı)">
+                                </div>
+                                <div class="btn-group">
+                                    <button class="btn btn-secondary prev-step" data-prev="2">
+                                        <i class="fas fa-arrow-left"></i> Əvvəlki
+                                    </button>
+                                    <button class="btn btn-primary next-step" data-next="4">
+                                        Önizləmə <i class="fas fa-eye"></i>
+                                    </button>
+                                </div>
+                            </div>
+
+                            <!-- Addım 4: Önizləmə -->
+                            <div class="step-form" data-step-form="4">
+                                <h4 style="margin-bottom: 16px;">CV Önizləmə</h4>
+                                <div id="cv-preview" class="cv-preview-box glass">
+                                    <div class="cv-preview-header">
+                                        <h3 id="preview-full-name">Ad Soyad</h3>
+                                        <p id="preview-contact">email@example.com | +994 ...</p>
+                                    </div>
+                                    <hr>
+                                    <div class="cv-preview-section">
+                                        <h5>Peşəkar Xülasə</h5>
+                                        <p id="preview-summary" class="typing-effect">
+                                            <span class="placeholder-text">Bütün addımları doldurduqdan sonra AI xülasəsi burada görünəcək.</span>
+                                        </p>
+                                    </div>
+                                    <div class="cv-preview-section">
+                                        <h5>İş Təcrübəsi</h5>
+                                        <p id="preview-experience"></p>
+                                    </div>
+                                    <div class="cv-preview-section">
+                                        <h5>Təhsil</h5>
+                                        <p id="preview-education"></p>
+                                    </div>
+                                    <div class="cv-preview-section">
+                                        <h5>Bacarıqlar</h5>
+                                        <p id="preview-skills"></p>
+                                    </div>
+                                    <div class="cv-preview-section">
+                                        <h5>Dillər</h5>
+                                        <p id="preview-languages"></p>
+                                    </div>
+                                </div>
+                                <div class="btn-group">
+                                    <button class="btn btn-secondary prev-step" data-prev="3">
+                                        <i class="fas fa-arrow-left"></i> Əvvəlki
+                                    </button>
+                                    <button id="btn-download-cv" class="btn btn-success">
+                                        <i class="fas fa-download"></i> CV-ni Yüklə (PDF)
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- ====== LINKEDIN ANALİZ ====== -->
+                    <div id="tab-linkedin-analyzer" class="tab-content">
+                        <div class="card glass">
+                            <div class="form-group">
+                                <label for="linkedin-url">LinkedIn Profil Linki</label>
+                                <input type="url" id="linkedin-url" class="form-input" 
+                                    placeholder="https://linkedin.com/in/profiliniz">
+                            </div>
+                            <button id="btn-analyze-linkedin" class="btn btn-primary">
+                                <i class="fas fa-chart-line"></i> Analiz Et
+                            </button>
+                            <div id="linkedin-result-panel" class="output-panel glass hidden" style="margin-top: 20px;">
+                                <div class="output-header">
+                                    <h5><i class="fas fa-robot"></i> Professional Xülasə</h5>
+                                    <div id="linkedin-typing-indicator" class="typing-indicator hidden">
+                                        <span></span><span></span><span></span>
+                                    </div>
+                                </div>
+                                <div id="linkedin-result" class="output-content"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- ========== BİZNES SƏHİFƏ ========== -->
+            <section id="page-business" class="page-section">
+                <div class="page-transition">
+                    <header class="page-header">
+                        <h2><i class="fas fa-store"></i> Lokal Biznes Panel</h2>
+                        <p>Müştəri rəylərinə avtomatik cavab və SMM kontent ideyaları</p>
+                    </header>
+
+                    <div class="services-grid">
+                        <!-- Rəy Cavablayıcı -->
+                        <div class="card glass">
+                            <div class="card-icon"><i class="fas fa-star"></i></div>
+                            <h4 class="card-title">Rəy Cavablayıcı</h4>
+                            <p class="card-text">
+                                Müştəri rəylərini AI ilə analiz edib avtomatik peşəkar cavab hazırlayın.
+                            </p>
+                            <div class="form-group">
+                                <label for="review-input">Müştəri Rəyi</label>
+                                <textarea id="review-input" class="form-textarea" rows="3" 
+                                    placeholder="Müştərinin rəyini bura daxil edin..."></textarea>
+                            </div>
+                            <button id="btn-review-reply" class="btn btn-primary btn-block">
+                                <i class="fas fa-reply"></i> Cavab Hazırla
+                            </button>
+                            <div id="review-output-panel" class="output-panel hidden" style="margin-top: 16px;">
+                                <div class="output-header">
+                                    <h5><i class="fas fa-comment-dots"></i> AI Cavabı</h5>
+                                    <div id="review-typing-indicator" class="typing-indicator hidden">
+                                        <span></span><span></span><span></span>
+                                    </div>
+                                </div>
+                                <div id="review-output" class="output-content"></div>
+                            </div>
+                        </div>
+
+                        <!-- SMM Kontent -->
+                        <div class="card glass">
+                            <div class="card-icon"><i class="fas fa-hashtag"></i></div>
+                            <h4 class="card-title">SMM Kontent Planlayıcı</h4>
+                            <p class="card-text">
+                                Biznesiniz üçün həftəlik paylaşım ideyaları əldə edin.
+                            </p>
+                            <div class="form-group">
+                                <label for="business-niche">Biznes Növü</label>
+                                <select id="business-niche" class="form-select">
+                                    <option value="restoran">Restoran / Kafe</option>
+                                    <option value="geyim">Geyim Mağazası</option>
+                                    <option value="texnika">Texnika Mağazası</option>
+                                    <option value="gozellik">Gözəllik Salonu</option>
+                                    <option value="idman">İdman Zalı</option>
+                                </select>
+                            </div>
+                            <button id="btn-smm-ideas" class="btn btn-primary btn-block">
+                                <i class="fas fa-lightbulb"></i> İdeyalar Yarat
+                            </button>
+                            <div id="smm-output-panel" class="output-panel hidden" style="margin-top: 16px;">
+                                <div class="output-header">
+                                    <h5><i class="fas fa-list"></i> Həftəlik İdeyalar</h5>
+                                    <div id="smm-typing-indicator" class="typing-indicator hidden">
+                                        <span></span><span></span><span></span>
+                                    </div>
+                                </div>
+                                <div id="smm-output" class="output-content"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+        </main>
+    </div>
+
+    <!-- JavaScript (Modullar) -->
+    <script type="module" src="js/app.js"></script>
+</body>
+</html>

@@ -1,0 +1,101 @@
+/* ==============================================
+   Fayl: css/animations.css
+   Təsvir: Animasiyalar, glassmorphism, typing.
+   ============================================== */
+
+/* ===== GLASSMORPHISM ===== */
+.glass {
+    background: var(--surface-glass);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border: 1px solid var(--glass-border);
+    box-shadow: var(--glass-shadow);
+    border-radius: var(--border-radius);
+}
+
+/* ===== ANİMASİYALAR ===== */
+.fade-in {
+    animation: fadeIn 0.7s ease-out forwards;
+}
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+.slide-up {
+    animation: slideUp 0.8s ease-out forwards;
+}
+@keyframes slideUp {
+    from { transform: translateY(30px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+}
+
+.page-transition {
+    animation: fadeSlideIn 0.4s ease-out;
+}
+@keyframes fadeSlideIn {
+    from { opacity: 0; transform: translateY(12px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* ===== TYPING INDICATOR ===== */
+.typing-indicator {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+}
+.typing-indicator span {
+    width: 7px;
+    height: 7px;
+    background-color: var(--accent-primary);
+    border-radius: 50%;
+    animation: bounce 1.4s infinite ease-in-out both;
+}
+.typing-indicator span:nth-child(1) { animation-delay: -0.32s; }
+.typing-indicator span:nth-child(2) { animation-delay: -0.16s; }
+.typing-indicator span:nth-child(3) { animation-delay: 0s; }
+@keyframes bounce {
+    0%, 80%, 100% { transform: scale(0); opacity: 0.3; }
+    40% { transform: scale(1); opacity: 1; }
+}
+
+/* ===== TYPING EFFECT (HƏRF-HƏRF) ===== */
+.typing-effect {
+    border-right: 2px solid var(--accent-primary);
+    animation: blinkCursor 0.8s infinite;
+}
+@keyframes blinkCursor {
+    0%, 100% { border-color: transparent; }
+    50% { border-color: var(--accent-primary); }
+}
+
+/* ===== CARD HOVER ===== */
+.card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 16px 40px rgba(0, 122, 255, 0.12);
+}
+
+/* ===== BUTTON RIPPLE ===== */
+.btn {
+    position: relative;
+    overflow: hidden;
+}
+.btn::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(circle, rgba(255,255,255,0.3) 10%, transparent 10%);
+    background-position: center;
+    background-repeat: no-repeat;
+    opacity: 0;
+    transition: opacity 0.5s, background-size 0.5s;
+    background-size: 0% 0%;
+}
+.btn:active::after {
+    background-size: 200% 200%;
+    opacity: 1;
+    transition: background-size 0s;
+}

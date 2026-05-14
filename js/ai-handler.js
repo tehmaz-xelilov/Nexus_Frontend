@@ -8,7 +8,7 @@
 // ===== BACKEND API BAZA URL =====
 // Render.com-da deploy etdikdən sonra bu URL-i öz URL-inizlə əvəz edin.
 // Məsələn: 'https://nexus-ai-backend.onrender.com/api'
-const API_BASE_URL = 'https://nexus-ai-backend.onrender.com/api';
+const API_BASE_URL = 'https://nexus-backend-463o.onrender.com/api';
 
 // ===== TYPING EFFECT (Mətnin hərf-hərf yazılması) =====
 /**
